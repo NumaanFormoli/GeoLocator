@@ -54,7 +54,6 @@ for line in fh:
     parms["address"] = address
     parms['key'] = api_key
     
-    # urlencode adds all the +s and nice stuff
     url = serviceurl + urllib.parse.urlencode(parms)
 
     print('Retrieving', url)
