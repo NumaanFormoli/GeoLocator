@@ -14,7 +14,7 @@ import ssl
 import sys
 
 # need api key
-api_key = "AIzaSyDbkfVbTcGPEJRI4ESpYmbLQffBGG9pAQ0"
+api_key = "INSERT API KEY HERE"
 serviceurl = "https://maps.googleapis.com/maps/api/geocode/json?"
 
 # additional detail for urllib
@@ -25,7 +25,6 @@ cur = conn.cursor()
 
 cur.execute('''CREATE TABLE IF NOT EXISTS Locations (address TEXT, geodata TEXT)''')
 
-# Ignore the SSL Certificate errors; Python doesn't ship with any legitmate certificates
 ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
@@ -80,9 +79,3 @@ for line in fh:
     if count % 10 == 0 :
         print('Pausing for a bit....')
         time.sleep(5)
-
-
-
-# loop through it and pull out the address
-# select from geodata where that address is the address, 
-# check if in dataabse, if so continue otherwise keep going
