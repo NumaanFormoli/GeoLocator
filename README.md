@@ -1,6 +1,9 @@
 # GeoLocator
 
-1. Geodump.py
-2. Geoload.py
-3. Where.data
-4. Where.js
+1. geodata.sqlite
+- Hello
+3. geodump.py
+4. geoload.py
+5. where.data
+6. where.js
+7. where.html
